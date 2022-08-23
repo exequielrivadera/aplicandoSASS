@@ -1,0 +1,145 @@
+@import "./utilities/variables";
+
+// NESTING 
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: $color-body;
+}
+
+.row{
+    .col-sm-4{
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-home{
+        width: 100px;
+        grid-column: 2 / 3; 
+    }
+
+    .imgMovinOn{
+        display: flex;
+        justify-content: center;
+    }
+
+    .movin-on{
+        margin: 30px;
+        width: 400px; 
+        height: 400px;
+        animation-name: movin-on;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite; 
+    }
+}
+
+.row{
+    .rowHome{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .newsInfo{
+        display: flex;
+        align-items: center;    
+        color: $color-principal;
+        text-align: center;
+        font-style: italic;
+        font-family: 'Bebas Neue', cursive;
+        text-shadow: $color-secundario 0.1em 0.1em 0.2em;
+    }
+}
+
+.artistas{
+    .destacados{
+        color: $color-principal;
+        margin: 100px;
+        justify-content: center;
+        text-align: center;
+        font-style: italic;
+        font-family: 'Bebas Neue', cursive;
+        text-shadow: $color-secundario 0.1em 0.1em 0.2em;
+        display: flex;
+    }
+
+    .cardsArtistas{        
+        display: flex;
+    }
+
+    .card{
+        margin: 10px;
+    }
+}
+
+.imgMain{    
+    display: grid;
+    justify-content: center;
+
+    .recomendaciones{
+        color: $color-principal;
+        margin-top: 100px;
+        justify-content: center;
+        text-align: center;
+        font-style: italic;
+        font-family: 'Bebas Neue', cursive;
+        text-shadow: $color-secundario 0.1em 0.1em 0.2em;
+        display: flex;
+    }
+
+    .carousel-item{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.samples{
+    color: $color-principal;
+    margin-top: 100px;
+    justify-content: center;
+    font-style: italic;
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: $color-secundario 0.1em 0.1em 0.2em;
+    display: flex;   
+}
+
+.rounded{    
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+}
+
+footer{
+    text-align: center;    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-small;
+    color: $color-secundario;
+    text-transform: uppercase;
+    
+    .spotify{
+        .spotify-img{
+            width: 30px;
+        height: 30px;
+        }
+    }
+} 
+
+@keyframes movin-on{
+    from{
+        transform:  scale(0.99);
+    }
+
+    to{
+        transform: scale(1);
+    }
+}
+
+.card:hover{
+    transform: translateY(-3%);
+}
+
+// FIN NESTING
+
+
+
+

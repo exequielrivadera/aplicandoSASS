@@ -1,244 +1,109 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #393e46; }
 
-/* CSS HOME */
+.row .col-sm-4 {
+  display: flex;
+  justify-content: center; }
 
-.nav-home{
-    background-color: rgb(34, 40, 49);
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    align-items: center;
-}
+.row .img-home {
+  width: 100px;
+  grid-column: 2 / 3; }
 
-.img-home{
-    width: 100px;
-    grid-column: 2 / 3;    
-}
+.row .imgMovinOn {
+  display: flex;
+  justify-content: center; }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(57, 62, 70);
-}
+.row .movin-on {
+  margin: 30px;
+  width: 400px;
+  height: 400px;
+  animation-name: movin-on;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
 
-.main-home{
-    grid-column: 4 / 7;
-    display: flex; 
-    justify-content: space-between; 
-    
-}
+.row .rowHome {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
-/* BOOTSTRAP */
+.row .newsInfo {
+  display: flex;
+  align-items: center;
+  color: #eeeeee;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: #030303 0.1em 0.1em 0.2em; }
 
-.col-sm-4{
-    display: flex;
-    justify-content: center;
-}
+.artistas .destacados {
+  color: #eeeeee;
+  margin: 100px;
+  justify-content: center;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: #030303 0.1em 0.1em 0.2em;
+  display: flex; }
 
-.carousel-item{
+.artistas .cardsArtistas {
+  display: flex; }
 
-    width: 300px;
-    height: 300px;
-}
+.artistas .card {
+  margin: 10px; }
 
-
-
-
-
-/* FIN DE BOOTSTRAP */
-
-.main-home li{
-    list-style: none;  
-}
-
-.menu{
-    width: 25px;
-    height: 25px;
-    display: none;
-}
-
-.nav-home .main-home a{
-    text-decoration: none;   
-}
-
-.nav-home .shop{
-    width: 25px;
-    height: 25px;
-    grid-column: 8 / 9;
-}
-
-
-
-.newsInfo{
-    display: flex;
-    align-items: center;    
-    color: rgb(238, 238, 238);
-    text-align: center;
-    font-style: italic;
-    font-family: 'Bebas Neue', cursive;
-    text-shadow: black 0.1em 0.1em 0.2em;    
-}
-
-.movinOnSpotify{
-    display: block;
-    margin: 6px auto; 
-}
-
-.movinOnTexto{
-    display: flex;
-    justify-content: center;
-    text-align: center; 
-}
-
-.rowHome{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.infoMain{
-}
-
-.leer-mas{
-    display: flex;
-    justify-content: center;
-    font-family: 'Bebas Neue', cursive;
-    padding: 10px 20px;
-    background-color: rgb(238, 238, 238);
-    border: none;
-    border-radius: 20px;
-    margin-top: 10px;
-    box-shadow: 1px 3px 11px -5px;
-    cursor: pointer;
-}
-
-.movin-on{    
-    margin: 30px;
-    width: 400px; 
-    height: 400px;
-    animation-name: movin-on;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite; 
-}
-
-@keyframes movin-on{
-    from{
-        transform:  scale(0.99);
-    }
-
-    to{
-        transform: scale(1);
-    }
-}
-
-.destacados{    
-    color: rgb(238, 238, 238);
-    margin: 100px;
-    justify-content: center;
-    text-align: center;
-    font-style: italic;
-    font-family: 'Bebas Neue', cursive;
-    text-shadow: black 0.1em 0.1em 0.2em;
-    display: flex; 
-}
-
-.cardsArtistas{
-    display: flex;
-}
-
-.card{
-    margin: 10px;
-}
-
-.card:hover{
-    transform: translateY(-3%);
-}
-
-
-
-
-.recomendaciones{
-    color: rgb(238, 238, 238);
+.imgMain {
+  display: grid;
+  justify-content: center; }
+  .imgMain .recomendaciones {
+    color: #eeeeee;
     margin-top: 100px;
     justify-content: center;
     text-align: center;
     font-style: italic;
     font-family: 'Bebas Neue', cursive;
-    text-shadow: black 0.1em 0.1em 0.2em;
-    display: flex;  
-}
-
-.samples{
-    color: rgb(238, 238, 238);
-    margin-top: 100px;
-    justify-content: center;
-    font-style: italic;
-    font-family: 'Bebas Neue', cursive;
-    text-shadow: black 0.1em 0.1em 0.2em;
-    display: flex;   
-}
-
-.imgMovinOn{
-    display: flex;
-    justify-content: center;
-}
-
-.imgMain{
-    display: grid;
-    justify-content: center;
-}
-
-.epic{
-    margin: 20px;
+    text-shadow: #030303 0.1em 0.1em 0.2em;
+    display: flex; }
+  .imgMain .carousel-item {
     width: 300px;
-    height: 300px;
-}
+    height: 300px; }
 
-.bang{
-    margin: 20px;
-    width: 300px;
-    height: 300px;
-}
+.samples {
+  color: #eeeeee;
+  margin-top: 100px;
+  justify-content: center;
+  font-style: italic;
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: #030303 0.1em 0.1em 0.2em;
+  display: flex; }
 
-.shave{
-    margin: 20px;
-    width: 300px;
-    height: 300px;
-}
+.rounded {
+  width: 300px;
+  height: 300px;
+  margin: 50px; }
 
-.mainSamples{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin: 0;
-}
-
-.rounded{
-    width: 300px;
-    height: 300px;
-    margin: 50px;
-}
-
-
-footer{
-    text-align: center;
-    
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: x-small;
-    color: black;
-    text-transform: uppercase;    
-} 
-
-footer .spotify-img{
+footer {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: x-small;
+  color: #030303;
+  text-transform: uppercase; }
+  footer .spotify .spotify-img {
     width: 30px;
-    height: 30px;
-}
+    height: 30px; }
+
+@keyframes movin-on {
+  from {
+    transform: scale(0.99); }
+  to {
+    transform: scale(1); } }
+
+.card:hover {
+  transform: translateY(-3%); }
 
 
+/* SIN NESTING */
 
 /* CSS CONTACTO */
 
@@ -1151,7 +1016,3 @@ span{
 
 
 }
-
-
-
-    
