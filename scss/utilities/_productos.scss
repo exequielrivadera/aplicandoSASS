@@ -1,0 +1,86 @@
+/* CSS PRODUCTOS */ 
+
+// LISTA
+
+@import "../base/listas";
+
+// MIXIN
+@import "../base/mixin";
+
+// EXTEND
+@import "../base/extend";
+
+.lanzados{
+    .lanzadosRecientes{
+        margin: 30px;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 4) 0.1em 0.1em 0.2em;    
+    }
+
+    .cancionSoundcloud{
+        margin: 30px;
+        justify-content: center;
+    }
+
+    .textoExplorar{
+        margin-top: 90px;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 4) 0.1em 0.1em 0.2em;  
+    }
+
+    .explorarCanciones{
+        margin: 30px;
+        justify-content: center;
+    }
+}
+
+section{
+    .freeDownload{
+        margin-top: 90px;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 4) 0.1em 0.1em 0.2em; 
+    }
+
+    .cancionesFree{
+        display: flex;
+        margin: 10px;    
+        justify-content: space-around;
+    }
+
+    .proximos{
+        margin-top: 90px;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 4) 0.1em 0.1em 0.2em; 
+    }
+    
+    .proximosLanzamientos{
+        @extend %flex;
+        margin: 10px;
+
+        .imgBootleg{
+            @include medidas (300px, 300px);
+        }
+    }
+}
+
+.spotify{
+    .imgProductos{
+        @include medidas (30px, 30px);
+    }    
+}
+
+
+
+

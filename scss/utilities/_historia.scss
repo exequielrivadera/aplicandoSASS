@@ -1,0 +1,112 @@
+/* CSS HISTORIA */
+
+// LISTA 
+
+@import "../base/listas";
+
+// MIXIN
+@import "../base/mixin";
+
+// EXTEND
+@import "../base/extend";
+
+main{
+    .quienesSomos{
+        margin-top: 90px;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em; 
+    }
+
+    .parrafoHistoria{
+        margin: 15px;
+        text-align: center;
+        font-style: italic;
+        color: nth($list: $color, $n: 5);
+    }
+
+    .queHacemos{
+        margin: 20px;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em; 
+    }
+
+    .parrafoQueHacemos{
+        margin: 15px;
+        text-align: center;
+        font-style: italic;
+        color: nth($list: $color, $n: 5); 
+    }
+}
+
+section{
+    .support{
+        margin: 20px;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em; 
+    }
+
+    .supporting{
+        margin: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.row{
+    .dj-support{
+        margin-top: 3em;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
+    }
+
+    .imgSupport{
+        @extend %flex;
+        margin: 10px;
+    }
+
+    .imgJuicy{
+        @include medidas (300px, 300px);
+        margin: 10px;
+    }
+    
+    .imgLuca{
+        @include medidas (300px, 300px);
+        margin: 10px;
+    }
+    
+    .imgMars{
+        @include medidas (300px, 300px);
+        margin: 10px;
+    }
+
+    .more{
+        margin: 20px;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;  
+    }
+}
+
+.spotify{
+    .imgHistoria{
+        @include medidas (30px, 30px);
+    }
+}
+
+
+
+

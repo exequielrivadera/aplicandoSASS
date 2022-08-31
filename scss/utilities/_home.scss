@@ -1,0 +1,132 @@
+/* CSS HOME */
+
+// LISTA
+@import "../base/listas";
+
+// MIXIN
+@import "../base/mixin";
+
+//EXTEND
+@import "../base/extend";
+
+.row{
+    .col-sm-4{
+        @extend %flex;
+    }
+
+    .img-home{
+        @include medidas (100px, 100px);
+        grid-column: 2 / 3; 
+    }
+
+    .imgMovinOn{
+        @extend %flex;
+    }
+
+    .movin-on{
+        @include medidas (400px, 400px);
+        margin: 30px;
+        animation-name: movin-on;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite; 
+    }
+}
+
+.row{
+    .rowHome{
+        @extend %flex;
+        align-items: center;
+    }
+
+    .newsInfo{
+        display: flex;
+        align-items: center;    
+        color: nth($list: $color, $n: 2);
+        text-align: center;
+        font-style: italic;
+        font-family: 'Bebas Neue', cursive;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
+    }
+}
+
+.artistas{
+    .destacados{
+        @extend %flex;
+        color: nth($list: $color, $n: 2);
+        margin: 100px;
+        text-align: center;
+        font-style: italic;
+        font-family: 'Bebas Neue', cursive;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
+    }
+
+    .cardsArtistas{        
+        display: flex;
+    }
+
+    .card{
+        margin: 10px;
+    }
+}
+
+.imgMain{    
+    display: grid;
+    justify-content: center;
+
+    .recomendaciones{
+        @extend %flex;
+        color: nth($list: $color, $n: 2);
+        margin-top: 100px;
+        text-align: center;
+        font-style: italic;
+        font-family: 'Bebas Neue', cursive;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
+    }
+
+    .carousel-item{
+        @include medidas (300px, 300px)
+    }
+}
+
+.samples{
+    @extend %flex;
+    color: nth($list: $color, $n: 2);
+    margin-top: 100px;
+    font-style: italic;
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;  
+}
+
+.rounded{  
+    @include medidas (300px, 300px);  
+    margin: 50px;
+}
+
+footer{
+    text-align: center;    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-small;
+    color: nth($list: $color, $n: 3);
+    text-transform: uppercase;
+    
+    .spotify{
+        .spotify-img{
+            @include medidas (30px, 30px)
+        }
+    }
+} 
+
+@keyframes movin-on{
+    from{
+        transform:  scale(0.99);
+    }
+
+    to{
+        transform: scale(1);
+    }
+}
+
+.card:hover{
+    transform: translateY(-3%);
+}

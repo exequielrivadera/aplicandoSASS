@@ -1,0 +1,187 @@
+
+/* CSS CONTACTO */
+
+// LISTA
+
+@import "../base/listas";
+
+//MIXIN
+@import "../base/mixin";
+
+// EXTEND
+@import "../base/extend";
+
+.mainContacto{
+    margin: 4em;
+    text-align: left;
+    color: nth($list: $color, $n: 2);
+
+    .textoContactoDuda{
+        font-family: 'Bebas Neue', cursive;
+        margin-top: 10px;
+        text-align: left;
+        color: nth($list: $color, $n: 2);
+    }
+
+    span{
+        color: nth($list: $color, $n: 2);
+    }
+
+    .consulta{
+        font-family: 'Bebas Neue', cursive;
+        margin: 10px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .textoContactoDemo{
+        font-family: 'Bebas Neue', cursive;
+        margin-top: 60px;
+        text-align: left;
+        color: nth($list: $color, $n: 2);
+    }
+
+    .demo{
+        margin: 10px;
+    }
+
+    .botonDemos{
+        @include box-model;
+    }
+}
+
+.ubicacion{
+    @extend %flex;
+    font-family: 'Bebas Neue', cursive;
+    margin: 60px;
+    text-align: left;
+    color: nth($list: $color, $n: 2);
+
+}
+
+.botonConsultanos{
+    @include box-model;
+}
+
+.botonReserva{
+    @include box-model;
+}
+
+.botonLista{
+    @include box-model;
+}
+
+section{
+    .encuentranos{
+        margin: 60px;
+        font-family: 'Bebas Neue', cursive;
+        text-align: left;
+        color: nth($list: $color, $n: 2);       
+    }
+}
+
+.redes{
+       margin: 60px;
+       display: flex;
+       justify-content: left;
+       gap: 15px;
+    
+
+        .facebook{
+            @include medidas (30px, 30px);
+        }
+
+        .instagram{
+            @include medidas (30px, 30px);
+        }
+
+        .soundcloud{
+            @include medidas (30px, 30px);
+        }
+}
+
+section{
+    .oficinas{
+        font-family: 'Bebas Neue', cursive;
+        margin-top: 60px;
+        text-align: left;
+        color: nth($list: $color, $n: 2);
+    }  
+    
+    .oficinas{
+        margin: 60px;
+        display: flex;
+        justify-content: left;
+        gap: 15px;
+    }
+}
+
+.imgOficinas{
+        display: flex;            
+        margin: 60px;
+        display: flex;
+        justify-content: left;
+        gap: 15px;
+}
+
+.formulario{
+    .sub{
+        margin: 60px;
+        font-family: 'Bebas Neue', cursive;
+        text-align: left;
+        color: nth($list: $color, $n: 2);       
+    }
+}
+
+.formularioContacto{
+    .form{
+        margin: 60px;
+        display: flex;
+        flex-direction: column;
+        width: 30vw; 
+        align-items: left;   
+    }
+
+    input{
+        padding: 10px 20px;
+        margin-bottom: 1em;
+        background: none;
+        border: none;
+        border-bottom: 1px solid nth($list: $color, $n: 2);
+        color: nth($list: $color, $n: 2); 
+    }
+}
+
+.spotifyContacto{
+    .imgContacto{
+        margin-top: 60px;
+        @include medidas (30px, 30px);
+    }
+}
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

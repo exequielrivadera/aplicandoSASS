@@ -1,0 +1,158 @@
+/* CSS EVENTOS */
+
+// LISTA
+
+@import "../base/listas";
+
+// MIXIN
+@import "../base/mixin";
+
+// EXTEND
+@import "../base/extend";
+
+.container{
+    .rowUno{
+        display: flex;
+        align-items: center;
+    }
+
+    .eventoUno{
+        @include medidas (100%, 100%);
+        margin-block: 13px;
+    }
+
+    .parrafoUno{
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 1.5em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
+    }
+
+    .botonUno{
+        .botonReserva {
+            @include box-model; 
+        }                    
+    }
+
+    .rowDos{
+        display: flex;
+        align-items: center;
+    }
+
+    .parrafoDos{
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 1.5em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em; 
+    }
+
+    .botonDos{
+        .botonLista {
+            @include box-model; }
+    }
+
+    .eventoDos{
+        @include medidas (100%, 100%);
+        margin-block: 13px;
+    }
+
+    .rowTres{
+        display: flex;
+        align-items: center;
+    }
+
+    .eventoTres{
+        @include medidas (100%, 100%);
+        margin-block: 13px;
+    }
+
+    .parrafoTres{
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 1.5em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
+    }
+
+    .rowCuatro{
+        display: flex;
+        align-items: center;
+    }
+
+    .eventoCuatro{
+        @include medidas (100%, 100%);
+        margin-block: 13px;
+    }
+
+    .parrafoCuatro{
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 1.5em;
+        text-shadow: nth($list: $color, $n: 4) 0.1em 0.1em 0.2em;
+    }
+
+    .rowCinco{
+        display: flex;
+        align-items: center;
+    }
+
+    .eventoCinco{
+        @include medidas (100%, 100%);
+        margin-block: 13px;
+    }
+
+    .parrafoCinco{
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 1.5em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
+    }
+}
+
+section{
+    .booking{
+        margin-top: 100px;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 1.5em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
+    } 
+}
+
+.formularioEventos{
+    @extend %flex;
+
+    .form{
+        margin: 60px;
+        display: flex;
+        flex-direction: column;
+        width: 30vw; 
+        align-items: left;   
+    }
+    
+    .form input{
+        padding: 10px 20px;
+        margin-bottom: 1em;
+        background: none;
+        border: none;
+        border-bottom: 1px solid nth($list: $color, $n: 2);
+        color: nth($list: $color, $n: 2);
+    }
+}
+
+.spotify{
+    .imgEventos{
+        @include medidas (30px, 30px);
+    }
+}
+
+
+
+
+
+
