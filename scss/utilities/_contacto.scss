@@ -75,7 +75,7 @@ section{
     .encuentranos{
         margin: 60px;
         font-family: 'Bebas Neue', cursive;
-        text-align: left;
+        text-align: center;
         color: nth($list: $color, $n: 2);       
     }
 }
@@ -83,20 +83,20 @@ section{
 .redes{
        margin: 60px;
        display: flex;
-       justify-content: left;
+       justify-content: space-around;
        gap: 15px;
     
 
         .facebook{
-            @include medidas (30px, 30px);
+            @include medidas (60px, 60px);
         }
 
         .instagram{
-            @include medidas (30px, 30px);
+            @include medidas (60px, 60px);
         }
 
         .soundcloud{
-            @include medidas (30px, 30px);
+            @include medidas (60px, 60px);
         }
 }
 
@@ -104,14 +104,14 @@ section{
     .oficinas{
         font-family: 'Bebas Neue', cursive;
         margin-top: 60px;
-        text-align: left;
+        text-align: center;
         color: nth($list: $color, $n: 2);
     }  
     
     .oficinas{
         margin: 60px;
         display: flex;
-        justify-content: left;
+        justify-content: center;
         gap: 15px;
     }
 }
@@ -119,12 +119,12 @@ section{
 .imgOficinas{
         display: flex;            
         margin: 60px;
-        display: flex;
-        justify-content: left;
+        justify-content: center;
         gap: 15px;
 }
 
 .formulario{
+    @extend %flex;
     .sub{
         margin: 60px;
         font-family: 'Bebas Neue', cursive;
@@ -136,8 +136,6 @@ section{
 .formularioContacto{
     .form{
         margin: 60px;
-        display: flex;
-        flex-direction: column;
         width: 30vw; 
         align-items: left;   
     }
@@ -152,9 +150,101 @@ section{
     }
 }
 
+main{
+    .quienesSomos{
+        margin-top: 90px;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em; 
+    }
+
+    .parrafoHistoria{
+        margin: 15px;
+        text-align: center;
+        font-style: italic;
+        color: nth($list: $color, $n: 6);
+    }
+
+    .queHacemos{
+        margin: 20px;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em; 
+    }
+
+    .parrafoQueHacemos{
+        margin: 15px;
+        text-align: center;
+        font-style: italic;
+        color: nth($list: $color, $n: 6); 
+    }
+}
+
+section{
+    .support{
+        margin: 20px;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em; 
+    }
+
+    .supporting{
+        margin: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.row{
+    .dj-support{
+        margin-top: 3em;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
+    }
+
+    .imgSupport{
+        @extend %flex;
+        margin: 10px;
+    }
+
+    .imgJuicy{
+        @include medidas (300px, 300px);
+        margin: 10px;
+    }
+    
+    .imgLuca{
+        @include medidas (300px, 300px);
+        margin: 10px;
+    }
+    
+    .imgMars{
+        @include medidas (300px, 300px);
+        margin: 10px;
+    }
+
+    .more{
+        margin: 20px;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: nth($list: $color, $n: 2);
+        font-size: 2em;
+        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;  
+    }
+}
+
+
+
 .spotifyContacto{
     .imgContacto{
-        margin-top: 60px;
         @include medidas (30px, 30px);
     }
 }

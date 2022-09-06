@@ -10,8 +10,10 @@
 @import "../base/extend";
 
 .row{
+    padding: 0;
     .col-sm-4{
         @extend %flex;
+        padding: 0;
     }
 
     .img-home{
@@ -19,35 +21,52 @@
         grid-column: 2 / 3; 
     }
 
-    .imgMovinOn{
-        @extend %flex;
+    .container-fluid{
+        margin-left: 15rem;
     }
 
-    .movin-on{
-        @include medidas (400px, 400px);
-        margin: 30px;
-        animation-name: movin-on;
-        animation-duration: 4s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite; 
-    }
 }
 
 .row{
     .rowHome{
-        @extend %flex;
+        display: grid;
+        grid-column: 6 / 12;
         align-items: center;
     }
 
-    .newsInfo{
-        display: flex;
-        align-items: center;    
+    .logoLetras{
+        @extend %flex;
+    }
+
+    .texto-label{
+        padding: 0;  
         color: nth($list: $color, $n: 2);
         text-align: center;
-        font-style: italic;
         font-family: 'Bebas Neue', cursive;
-        text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
+        }
+}
+
+.banners{
+    .row{
+        @extend %flex;
+        padding: 6rem;
     }
+
+    .movinBanner{
+        width: 100%
+    }
+
+    .yourLove{
+        width: 100%;
+    }
+
+    .revolution{
+        width: 100%;
+    }
+}
+
+.recomendados{
+    background-color: $color-body-cards;
 }
 
 .artistas{
@@ -61,38 +80,151 @@
         text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
     }
 
-    .cardsArtistas{        
-        display: flex;
-    }
-
     .card{
+        display: grid;
+        grid-column: 2;
         margin: 10px;
+
+
+
+        .card-body{
+            background-color: $color-body-cards;
+            .card-title{
+                text-align: center;
+                font-style: italic;
+                font-family: 'Bebas Neue', cursive;
+            }
+            .card-text{
+                font-style: italic;
+                color: $color-texto-cards;               
+            }
+
+            a{
+                color: $color-secundario;
+            }
+
+            .boton-spotify{
+                @extend %flex;
+                background-color: $color-footer;
+                width: 40%;
+                border: none;
+                border-radius: 50px;                
+            }
+
+            .spotify-link{
+                @extend %flex;
+            }
+
+
+        }
     }
 }
 
-.imgMain{    
-    display: grid;
-    justify-content: center;
+// SECTION ULTIMO
 
-    .recomendaciones{
-        @extend %flex;
+
+    .recomendacionesTexto{
+        margin: 10px;
         color: nth($list: $color, $n: 2);
         margin-top: 100px;
-        text-align: center;
+        text-align: left;
         font-style: italic;
         font-family: 'Bebas Neue', cursive;
         text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
     }
 
-    .carousel-item{
-        @include medidas (300px, 300px)
+.section-recomendacionesDos{   
+    .recomendacionesDos{
+        .recoDos{
+            margin: 10px;
+            color: nth($list: $color, $n: 2);
+            margin-top: 100px;
+            text-align: left;
+            font-style: italic;
+            font-family: 'Bebas Neue', cursive;
+            text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
+        }
+
+        .img{
+            .filaUno{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 90px;
+                overflow: hidden;
+
+                .epic{ 
+                    @include imagenes;  
+                }
+
+                .epic:hover{
+                    transform: scale(1.2);
+                }
+
+                .shave{
+                    @include imagenes;  
+                }
+
+                .shave:hover{
+                    transform: scale(1.2);
+                }
+
+                .bang{
+                    @include imagenes; 
+                }
+
+                .bang:hover{
+                    transform: scale(1.2);
+                }
+            }
+
+            .filaDos{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 90px;                
+                overflow: hidden;
+
+                .club-coming-down{
+                    @include imagenes;
+                }
+
+                .club-coming-down:hover{
+                    transform: scale(1.2);
+                }
+
+                .for-the-night{
+                    @include imagenes;
+                }
+
+                .for-the-night:hover{
+                    transform: scale(1.2);
+                }
+
+                .hope{
+                    @include imagenes; 
+                }
+
+                .hope:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+
     }
-}
+
+
+
+    
+}    
+        
+        
+
+
+
+
+
 
 .samples{
-    @extend %flex;
     color: nth($list: $color, $n: 2);
-    margin-top: 100px;
     font-style: italic;
     font-family: 'Bebas Neue', cursive;
     text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;  
@@ -104,6 +236,7 @@
 }
 
 footer{
+    background-color: $color-footer;
     text-align: center;    
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: x-small;
@@ -112,20 +245,13 @@ footer{
     
     .spotify{
         .spotify-img{
+            color: black;
             @include medidas (30px, 30px)
         }
     }
 } 
 
-@keyframes movin-on{
-    from{
-        transform:  scale(0.99);
-    }
 
-    to{
-        transform: scale(1);
-    }
-}
 
 .card:hover{
     transform: translateY(-3%);

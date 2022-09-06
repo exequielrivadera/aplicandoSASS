@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <!-- CSS only -->
@@ -18,10 +19,10 @@
             <div class="row">
                
                 <div class="col-sm-4 bg-gradient">
-                    <img class="img-home" src="./img/rivaside-logo.png" alt="">
+                    <img class="img-home" src="./img/rivaside-logo.png" alt="logo principal">
                 </div>
-                
-                <nav class="navbar navbar-expand-lg navbar-expand-sm bg-danger col-sm-8">
+
+                <nav class="navbar navbar-expand-lg navbar-expand-sm bg-rgb(44, 51, 51) col-sm-8">
                     <div class="container-fluid">
                       <a class="navbar-brand" href="#"></a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +42,7 @@
                             </a>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="./page/eventos.html">Eventos</a></li>
-                              <li><a class="dropdown-item" href="./page/historia.html">Historia</a></li>
+                              <li><a class="dropdown-item" href="./page/studio.html">Studio</a></li>
                               <li><hr class="dropdown-divider"></li>
                               <li><a class="dropdown-item" href="./page/productos.html">Productos</a></li>
                             </ul>
@@ -55,17 +56,48 @@
     <main class="mainHome">
       <div class="container containerHome">
         <div class="row">
-          <div class="rowHome">      
-            <p class="col-lg-6 col-md-4 col-sm-12 newsInfo"> El DJ/Productor D-Upside regresa a Rivaside con su nuevo sencillo "Movin' On", una joya del Bass House cuidadosamente inspirada en los sonidos característicos de la música house de los Paises Bajos. La pista incorpora una línea superior vocal aterciopelada con melodías profundas y bass, que conducen a una caída eufónica pero enérgica, todo eso combinado con una percusión y un ritmo claramente elaborados. “Movin' On” se siente como en casa tanto para bailar en la radio como en la pista de baile de tu fiesta favorita. Para D-Upside, es un lanzamiento mas en Rivaside, luego de su último "Bang" de principios de este año. </p>
-              
-            <div class="col-lg-6 col-md-8 col-sm-12 imgMovinOn">
-              <img class="movin-on" src="./img/movin-on.jpg" alt="">
+          <div class="rowHome">
+
+            <div class="logoLetras">
+              <img class="imgLetras" data-aos="flip-right" data-aos-duration="1000" src="./img/rivaside-records.png" alt="logo rivaside letras">
+            </div>
+
+            <div class="texto-label" data-aos="zoom-in-right" data-aos-duration="1000">
+              <h1>News</h1>
             </div>
 
           </div>
         </div>
       </div>
-    </main>   
+    </main> 
+    
+    <section class="container banners">
+
+
+      <div class="row">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner ">
+            <div class="carousel-item active">
+              <img src="./img/movin-banner.jpg" class=" movinBanner" alt="banner de cancion movin' on">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/your-love.jpg" class=" yourLove" alt="banner de cancion your love">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/revolution.jpg" class=" revolution" alt="banner de cancion revolution">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
     
     <section class="recomendados">
 
@@ -75,97 +107,99 @@
           <div class="artistas">
             <h3 class="destacados">Artistas destacados</h3>
   
-            <div class="col-md-12 col-lg-12 cardsArtistas">
-            <div class="card" style="width: 18rem;">
-              <img src="./img/d-upside.png" class="card-img-top" alt="...">
+            <div class="cardsArtistas">
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div data-aos="fade-right" data-aos-duration="2000" class="col">
+                  <div class="card">
+                    <img src="./img/d-upside.png" class="card-img-top" alt="card d-upside">
               <div class="card-body">
-                <h5 class="card-title">D-Upside</h5>
+                <h4 class="card-title">D-Upside</h4>
                 <p class="card-text">DJ/Productor fundador de Rivaside Records. Los genero musicales en los que se destaca es el Bass House, Progressive House y Groove House.</p>
-                <a href="https://open.spotify.com/artist/6PCtdMmLlxHEOidjcMlk4i?si=awChsKViTBO8brLfO4EBbg" target="_blank" class="btn btn-secondary">Spotify</a>
-              </div>
-            </div>
-  
-            <div class="card" style="width: 18rem;">
-              <img src="./img/andsick.png" class="card-img-top" alt="...">
+                <div class="spotify-link">
+                <a href="https://open.spotify.com/artist/6PCtdMmLlxHEOidjcMlk4i?si=awChsKViTBO8brLfO4EBbg" target="_blank" class="btn btn-secondary boton-spotify">Spotify</a>
+                </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="2000" class="col">
+                  <div class="card">
+                    <img src="./img/andsick.png" class="card-img-top" alt="card andsick">
               <div class="card-body">
-                <h5 class="card-title">ANDSICK</h5>
+                <h4 class="card-title">ANDSICK</h4>
                 <p class="card-text">Productor oriundo de Lima, Peru. Los generos musicales en los que se destaca es el Progressive House</p>
-                <a href="https://open.spotify.com/artist/7KRcp1ggrwbwhcytEAiLuC?si=6UkLskNeTbmWFDbgXZnzTA" target="_blank" class="btn btn-secondary">Spotify</a>
-              </div>
-            </div>
-  
-            <div class="card" style="width: 18rem;">
-              <img src="./img/bareon.png" class="card-img-top" alt="...">
+                <div class="spotify-link">
+                <a href="https://open.spotify.com/artist/7KRcp1ggrwbwhcytEAiLuC?si=6UkLskNeTbmWFDbgXZnzTA" target="_blank" class="btn btn-secondary boton-spotify">Spotify</a>
+                </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div data-aos="fade-right" data-aos-duration="2000" class="col">
+                  <div class="card">
+                    <img src="./img/bareon.png" class="card-img-top" alt="card bareon">
               <div class="card-body">
-                <h5 class="card-title">Bareon</h5>
+                <h4 class="card-title">Bareon</h4>
                 <p class="card-text">DJ/Productor de Toulouse, Francia. Los generos musicales en los que se destaca es el Bass House y Progressive House</p>
-                <a href="https://open.spotify.com/artist/79N62DK6zX8ScNlCRKp1FR?si=T9GFZooLRjWc9hCqWaHpDQ" target="_blank" class="btn btn-secondary">Spotify</a>
-              </div>
-            </div>
-  
-            <div class="card" style="width: 18rem;">
-              <img src="./img/nighbrs.png" class="card-img-top" alt="...">
+                <div class="spotify-link">
+                <a href="https://open.spotify.com/artist/79N62DK6zX8ScNlCRKp1FR?si=T9GFZooLRjWc9hCqWaHpDQ" target="_blank" class="btn btn-secondary boton-spotify">Spotify</a>
+                </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="2000" class="col">
+                  <div class="card">
+                    <img src="./img/nighbrs.png" class="card-img-top" alt="card nighbrs">
               <div class="card-body">
-                <h5 class="card-title">Nighbrs</h5>
+                <h4 class="card-title">Nighbrs</h4>
                 <p class="card-text">Productores de Włoszczowa, Polonia. Los generos musicales en los que se destacan son Future House y Big Room.</p>
-                <a href="https://open.spotify.com/artist/6ItKhDBtgjM9YehE1pqT3f?si=XIlg3xuRRMyMzBbjrge1og&nd=1" target="_blank" class="btn btn-secondary">Spotify</a>
+                <div class="spotify-link">
+                  <a href="https://open.spotify.com/artist/6ItKhDBtgjM9YehE1pqT3f?si=XIlg3xuRRMyMzBbjrge1og&nd=1" target="_blank" class="btn btn-secondary boton-spotify">Spotify</a>
+                </div>
+                
+                    </div>
+                  </div>
+                </div>
               </div>
+
+
+
             </div>
+        </div>
+        </div>
+     </div>       
+    </section>
+
+    <section class="container section-recomendacionesDos">
+      <div class="row col-sm-6 col-lg-12 recomendacionesDos">
+          <h3 class="recoDos">Recomendaciones</h3>
+          <div class="img">
+              <div class="filaUno">
+                <img class="epic" src="./img/epic.png" alt="imagen cancion epic">
+                <img class="shave" src="./img/shave.png" alt="imagen cancion shave">
+                <img class="bang" src="./img/bang.png" alt="imagen cancion shave">
+              </div>
+              <h3 class="recoDos">Mas escuchados</h3>
+                <div class="filaDos">
+                  <img class="club-coming-down" src="./img/club-coming-down.jpg" alt="imagen cancion club coming down">
+                  <img class="for-the-night" src="./img/for-the-night.jpg" alt="imagen cancion for-the-night">
+                  <img class="hope" src="./img/hope.jpg" alt="imagen cancion hope">
+                </div>
           </div>
-        </div>
-        </div>
-     </div>
-
-      <div class="imgMain">
-          <h3 class="recomendaciones">Recomendaciones</h3>
-          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="./img/epic.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/bang.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./img/shave.png" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-      </div>
-
-        <h3 class="samples">Sample packs</h3>
-
-        <div class="text-center">
-          <img src="./img/sample.png" class="rounded" alt="">
-        </div>
-
-       
+              
     </section>
 
 
     <footer id="pie-de-pagina">
-        <div class="spotify">
-            <a href="https://open.spotify.com/artist/6PCtdMmLlxHEOidjcMlk4i?si=xVri-rJVSwOtnOjB_2oZLw">
-                <img class="spotify-img" src="./img/spotify-logo.png" alt="">
-            </a>            
-        </div>
-        <h3 class="derechos"> Todos los derechos reservados </h3>
-        <h4 class="label"> Rivaside Records </h4>
+        <h4 class="derechos"> Todos los derechos reservados </h4>
+        <h5 class="label"> Rivaside Records </h5>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
