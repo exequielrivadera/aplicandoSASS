@@ -10,6 +10,11 @@
 // EXTEND
 @import "../base/extend";
 
+.navegacion{
+    display: grid;
+    justify-content: end;
+}
+
 .lanzados{
     .lanzadosRecientes{
         margin: 30px;
@@ -57,6 +62,7 @@ section{
     }
 
     .proximos{
+        display: block;
         margin-top: 90px;
         text-align: center;
         font-family: 'Bebas Neue', cursive;

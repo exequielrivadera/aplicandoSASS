@@ -3,9 +3,19 @@ body {
   background-color: #2c3333; }
 
 /* CSS HOME */
-.row .col-sm-4, .row .logoLetras, .banners .row, .artistas .destacados, .artistas .card .card-body .boton-spotify, .artistas .card .card-body .spotify-link, .ubicacion, .formulario, .row .imgSupport, .formularioEventos, section .proximosLanzamientos {
+.row .col-sm-4, .row .logoLetras, .banners .row, .artistas .destacados, .artistas .card .card-body .boton-spotify, .artistas .card .card-body .spotify-link, .ubicacion, .row .imgSupport, .eventosInfo .formularioEventos, .formularioEventos, section .proximosLanzamientos {
   display: flex;
   justify-content: center; }
+
+.container-fluid {
+  background-color: #404646; }
+
+.navegacion {
+  display: grid;
+  justify-content: end; }
+
+.barraNavegacion ul li a {
+  color: azure; }
 
 .row {
   padding: 0; }
@@ -15,8 +25,6 @@ body {
     width: 100px;
     height: 100px;
     grid-column: 2 / 3; }
-  .row .container-fluid {
-    margin-left: 15rem; }
 
 .row .rowHome {
   display: grid;
@@ -29,17 +37,16 @@ body {
   text-align: center;
   font-family: 'Bebas Neue', cursive; }
 
-.banners .row {
-  padding: 6rem; }
-
-.banners .movinBanner {
-  width: 100%; }
-
-.banners .yourLove {
-  width: 100%; }
-
-.banners .revolution {
-  width: 100%; }
+.banners {
+  background-color: #393e46; }
+  .banners .row {
+    margin-top: 0rem; }
+  .banners .movinBanner {
+    width: 100%; }
+  .banners .yourLove {
+    width: 100%; }
+  .banners .revolution {
+    width: 100%; }
 
 .recomendados {
   background-color: #395b64; }
@@ -166,7 +173,7 @@ footer {
   background-color: #e7f6f2;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: x-small;
+  font-size: 1.5rem;
   color: #030303;
   text-transform: uppercase; }
   footer .spotify .spotify-img {
@@ -177,10 +184,42 @@ footer {
 .card:hover {
   transform: translateY(-3%); }
 
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+  .mainHome {
+    display: flex;
+    justify-content: center; }
+  .row .logoLetras {
+    justify-self: center;
+    width: 300px;
+    height: 300px; }
+  .section-recomendacionesDos .recomendacionesDos .recoDos {
+    text-align: center; }
+  .section-recomendacionesDos .recomendacionesDos .img .filaUno {
+    display: grid;
+    justify-content: center; }
+  .section-recomendacionesDos .recomendacionesDos .img .filaDos {
+    display: grid;
+    justify-content: center; } }
+
+@media screen and (max-width: 992px) {
+  .section-recomendacionesDos .recomendacionesDos .recoDos {
+    text-align: center; }
+  .section-recomendacionesDos .recomendacionesDos .img .filaUno {
+    display: grid;
+    justify-content: center; }
+  .section-recomendacionesDos .recomendacionesDos .img .filaDos {
+    display: grid;
+    justify-content: center; } }
+
 /* CSS CONTACTO */
-.row .col-sm-4, .row .logoLetras, .banners .row, .artistas .destacados, .artistas .card .card-body .boton-spotify, .artistas .card .card-body .spotify-link, .ubicacion, .formulario, .row .imgSupport, .formularioEventos, section .proximosLanzamientos {
+.row .col-sm-4, .row .logoLetras, .banners .row, .artistas .destacados, .artistas .card .card-body .boton-spotify, .artistas .card .card-body .spotify-link, .ubicacion, .row .imgSupport, .eventosInfo .formularioEventos, .formularioEventos, section .proximosLanzamientos {
   display: flex;
   justify-content: center; }
+
+.navegacion {
+  display: grid;
+  justify-content: end; }
 
 .mainContacto {
   margin: 4em;
@@ -260,7 +299,7 @@ section .encuentranos {
 .redes {
   margin: 60px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 15px; }
   .redes .facebook {
     width: 60px;
@@ -290,11 +329,14 @@ section .oficinas {
   justify-content: center;
   gap: 15px; }
 
-.formulario .sub {
-  margin: 60px;
-  font-family: 'Bebas Neue', cursive;
-  text-align: left;
-  color: #eeeeee; }
+.formulario {
+  display: flex;
+  justify-content: center; }
+  .formulario .sub {
+    margin: 60px;
+    font-family: 'Bebas Neue', cursive;
+    text-align: left;
+    color: #eeeeee; }
 
 .formularioContacto .form {
   margin: 60px;
@@ -358,9 +400,6 @@ section .supporting {
   font-size: 2em;
   text-shadow: #030303 0.1em 0.1em 0.2em; }
 
-.row .imgSupport {
-  margin: 10px; }
-
 .row .imgJuicy {
   width: 300px;
   height: 300px;
@@ -377,247 +416,288 @@ section .supporting {
   margin: 10px; }
 
 .row .more {
-  margin: 20px;
   text-align: center;
   font-family: 'Bebas Neue', cursive;
   color: #eeeeee;
-  font-size: 2em;
   text-shadow: #030303 0.1em 0.1em 0.2em; }
 
 .spotifyContacto .imgContacto {
   width: 30px;
   height: 30px; }
 
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+  .container .row .imgSupport {
+    display: grid;
+    justify-content: center; }
+  .formulario {
+    display: grid; } }
+
+@media screen and (max-width: 992px) {
+  .container .row .imgSupport {
+    display: grid;
+    justify-content: center; } }
+
 /* CSS EVENTOS */
-.row .col-sm-4, .row .logoLetras, .banners .row, .artistas .destacados, .artistas .card .card-body .boton-spotify, .artistas .card .card-body .spotify-link, .ubicacion, .formulario, .row .imgSupport, .formularioEventos, section .proximosLanzamientos {
+.row .col-sm-4, .row .logoLetras, .banners .row, .artistas .destacados, .artistas .card .card-body .boton-spotify, .artistas .card .card-body .spotify-link, .ubicacion, .row .imgSupport, .eventosInfo .formularioEventos, .formularioEventos, section .proximosLanzamientos {
   display: flex;
   justify-content: center; }
 
-.container .rowUno {
-  display: flex;
-  align-items: center; }
+.navegacion {
+  display: grid;
+  justify-content: end; }
 
-.container .eventoUno {
-  width: 100%;
-  height: 100%;
-  margin-block: 13px; }
+.eventosInfo {
+  background-color: #5d6666; }
+  .eventosInfo .container .rowUno {
+    display: flex;
+    align-items: center; }
+  .eventosInfo .container .eventoUno {
+    width: 100%;
+    height: 100%;
+    margin-block: 13px; }
+  .eventosInfo .container .parrafoUno {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    color: #eeeeee;
+    font-size: 1.5em;
+    text-shadow: #030303 0.1em 0.1em 0.2em; }
+    .eventosInfo .container .parrafoUno .antares {
+      font-size: 2rem; }
+  .eventosInfo .container .botonUno .botonReserva {
+    font-family: 'Bebas Neue', cursive;
+    padding: 10px 20px;
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    box-shadow: 1px 3px 11px -5px;
+    cursor: pointer; }
+  .eventosInfo .container .rowDos {
+    display: flex;
+    align-items: center;
+    background-color: #030303; }
+  .eventosInfo .container .parrafoDos {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    color: #eeeeee;
+    font-size: 1.5em;
+    text-shadow: #030303 0.1em 0.1em 0.2em; }
+    .eventosInfo .container .parrafoDos .space {
+      font-size: 2rem; }
+  .eventosInfo .container .botonDos .botonLista {
+    font-family: 'Bebas Neue', cursive;
+    padding: 10px 20px;
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    box-shadow: 1px 3px 11px -5px;
+    cursor: pointer; }
+  .eventosInfo .container .eventoDos {
+    width: 100%;
+    height: 100%;
+    margin-block: 13px; }
+  .eventosInfo .container .rowTres {
+    display: flex;
+    align-items: center; }
+  .eventosInfo .container .eventoTres {
+    width: 100%;
+    height: 100%;
+    margin-block: 13px; }
+  .eventosInfo .container .parrafoTres {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    color: #eeeeee;
+    font-size: 1.5em;
+    text-shadow: #030303 0.1em 0.1em 0.2em; }
+    .eventosInfo .container .parrafoTres .beer-and-music {
+      font-size: 2rem; }
+  .eventosInfo .container .rowCuatro {
+    display: flex;
+    align-items: center;
+    background-color: #030303; }
+  .eventosInfo .container .eventoCuatro {
+    width: 100%;
+    height: 100%;
+    margin-block: 13px; }
+  .eventosInfo .container .parrafoCuatro {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    color: #eeeeee;
+    font-size: 1.5em;
+    text-shadow: #222831 0.1em 0.1em 0.2em; }
+    .eventosInfo .container .parrafoCuatro .bassement {
+      font-size: 2rem; }
+  .eventosInfo .container .rowCinco {
+    display: flex;
+    align-items: center; }
+  .eventosInfo .container .eventoCinco {
+    width: 100%;
+    height: 100%;
+    margin-block: 13px; }
+  .eventosInfo .container .parrafoCinco {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    color: #eeeeee;
+    text-shadow: #030303 0.1em 0.1em 0.2em; }
+    .eventosInfo .container .parrafoCinco .orbital {
+      font-size: 2rem; }
+    .eventosInfo .container .parrafoCinco .eventoOrbital {
+      font-size: 1rem; }
+    .eventosInfo .container .parrafoCinco .botonUno .botonReserva {
+      font-family: 'Bebas Neue', cursive;
+      padding: 10px 20px;
+      background-color: #eeeeee;
+      border: none;
+      border-radius: 20px;
+      margin-top: 10px;
+      box-shadow: 1px 3px 11px -5px;
+      cursor: pointer; }
+  .eventosInfo section .booking {
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    color: #eeeeee;
+    font-size: 1.5em;
+    text-shadow: #030303 0.1em 0.1em 0.2em; }
+  .eventosInfo .formularioEventos .form {
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    align-items: left; }
+  .eventosInfo .formularioEventos .form input {
+    padding: 10px 20px;
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    color: #eeeeee; }
+  .eventosInfo footer {
+    background-color: #e7f6f2;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    color: #030303;
+    text-transform: uppercase; }
+    .eventosInfo footer .spotify .spotify-img {
+      color: black;
+      width: 30px;
+      height: 30px; }
 
-.container .parrafoUno {
-  text-align: center;
-  font-family: 'Bebas Neue', cursive;
-  color: #eeeeee;
-  font-size: 1.5em;
-  text-shadow: #030303 0.1em 0.1em 0.2em; }
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+  .rowUno {
+    margin-top: 1rem;
+    background-color: none; }
+  .rowDos {
+    margin-top: 10rem; }
+  .rowTres {
+    margin-top: 2rem;
+    background-color: none; }
+  .rowCuatro {
+    margin-top: 10rem;
+    background-color: #030303; }
+  .rowCinco {
+    margin-top: 2rem; } }
 
-.container .botonUno .botonReserva {
-  font-family: 'Bebas Neue', cursive;
-  padding: 10px 20px;
-  background-color: #eeeeee;
-  border: none;
-  border-radius: 20px;
-  margin-top: 10px;
-  box-shadow: 1px 3px 11px -5px;
-  cursor: pointer; }
-
-.container .rowDos {
-  display: flex;
-  align-items: center; }
-
-.container .parrafoDos {
-  text-align: center;
-  font-family: 'Bebas Neue', cursive;
-  color: #eeeeee;
-  font-size: 1.5em;
-  text-shadow: #030303 0.1em 0.1em 0.2em; }
-
-.container .botonDos .botonLista {
-  font-family: 'Bebas Neue', cursive;
-  padding: 10px 20px;
-  background-color: #eeeeee;
-  border: none;
-  border-radius: 20px;
-  margin-top: 10px;
-  box-shadow: 1px 3px 11px -5px;
-  cursor: pointer; }
-
-.container .eventoDos {
-  width: 100%;
-  height: 100%;
-  margin-block: 13px; }
-
-.container .rowTres {
-  display: flex;
-  align-items: center; }
-
-.container .eventoTres {
-  width: 100%;
-  height: 100%;
-  margin-block: 13px; }
-
-.container .parrafoTres {
-  text-align: center;
-  font-family: 'Bebas Neue', cursive;
-  color: #eeeeee;
-  font-size: 1.5em;
-  text-shadow: #030303 0.1em 0.1em 0.2em; }
-
-.container .rowCuatro {
-  display: flex;
-  align-items: center; }
-
-.container .eventoCuatro {
-  width: 100%;
-  height: 100%;
-  margin-block: 13px; }
-
-.container .parrafoCuatro {
-  text-align: center;
-  font-family: 'Bebas Neue', cursive;
-  color: #eeeeee;
-  font-size: 1.5em;
-  text-shadow: #222831 0.1em 0.1em 0.2em; }
-
-.container .rowCinco {
-  display: flex;
-  align-items: center; }
-
-.container .eventoCinco {
-  width: 100%;
-  height: 100%;
-  margin-block: 13px; }
-
-.container .parrafoCinco {
-  text-align: center;
-  font-family: 'Bebas Neue', cursive;
-  color: #eeeeee;
-  font-size: 1.5em;
-  text-shadow: #030303 0.1em 0.1em 0.2em; }
-
-section .booking {
-  margin-top: 100px;
-  text-align: center;
-  font-family: 'Bebas Neue', cursive;
-  color: #eeeeee;
-  font-size: 1.5em;
-  text-shadow: #030303 0.1em 0.1em 0.2em; }
-
-.formularioEventos .form {
-  margin: 60px;
-  display: flex;
-  flex-direction: column;
-  width: 30vw;
-  align-items: left; }
-
-.formularioEventos .form input {
-  padding: 10px 20px;
-  margin-bottom: 1em;
-  background: none;
-  border: none;
-  border-bottom: 1px solid #eeeeee;
-  color: #eeeeee; }
-
-.spotify .imgEventos {
-  width: 30px;
-  height: 30px; }
+@media screen and (max-width: 992px) {
+  .rowUno {
+    margin-top: 1rem;
+    background-color: none; }
+  .rowDos {
+    margin-top: 10rem;
+    background-color: #030303; }
+  .rowTres {
+    margin-top: 2rem;
+    background-color: none; }
+  .rowCuatro {
+    margin-top: 10rem;
+    background-color: #030303; }
+  .rowCinco {
+    margin-top: 2rem; } }
 
 /* CSS HISTORIA */
-.row .col-sm-4, .row .logoLetras, .banners .row, .artistas .destacados, .artistas .card .card-body .boton-spotify, .artistas .card .card-body .spotify-link, .ubicacion, .formulario, .row .imgSupport, .formularioEventos, section .proximosLanzamientos {
+.row .col-sm-4, .row .logoLetras, .banners .row, .artistas .destacados, .artistas .card .card-body .boton-spotify, .artistas .card .card-body .spotify-link, .ubicacion, .row .imgSupport, .eventosInfo .formularioEventos, .formularioEventos, section .proximosLanzamientos {
   display: flex;
   justify-content: center; }
 
-.container .rowUno {
-  display: flex;
-  align-items: center; }
-  .container .rowUno .homeStudio {
+.navegacion {
+  display: grid;
+  justify-content: end; }
+
+.studio {
+  background-color: #4c5252; }
+  .studio .rowUno {
+    display: flex;
+    align-items: center; }
+    .studio .rowUno .homeStudio {
+      text-align: center;
+      padding: 65px;
+      font-family: 'Bebas Neue', cursive;
+      color: #eeeeee;
+      font-size: 3em;
+      text-transform: uppercase;
+      text-shadow: #030303 0.1em 0.1em 0.2em; }
+  .studio .studio {
+    width: 100%;
+    height: 100%;
+    margin-block: 13px; }
+  .studio .parrafoStudio {
     text-align: center;
-    margin: 30px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Montserrat', sans-serif;
     color: #eeeeee;
-    font-size: 1.5em;
+    font-size: 1em;
     text-shadow: #030303 0.1em 0.1em 0.2em; }
-
-.container .studio {
-  width: 100%;
-  height: 100%;
-  margin-block: 13px; }
-
-.container .parrafoUno {
-  text-align: center;
-  font-family: 'Bebas Neue', cursive;
-  color: #eeeeee;
-  font-size: 1em;
-  text-shadow: #030303 0.1em 0.1em 0.2em; }
-
-.container .rowDos {
-  display: flex;
-  align-items: center; }
-
-.container .parrafoDos {
-  text-align: center;
-  font-family: 'Bebas Neue', cursive;
-  color: #eeeeee;
-  font-size: 1em;
-  text-shadow: #030303 0.1em 0.1em 0.2em; }
-
-.container .daws {
-  width: 100%;
-  height: 100%;
-  margin-block: 13px; }
-
-.container .rowTres {
-  display: flex;
-  align-items: center; }
-  .container .rowTres .nuestrasRecomendaciones {
-    margin: 50px;
+  .studio .rowDos {
+    display: flex;
+    align-items: center; }
+  .studio .parrafoDaws {
     text-align: center;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Montserrat', sans-serif;
     color: #eeeeee;
-    font-size: 1.5em;
+    font-size: 1em;
     text-shadow: #030303 0.1em 0.1em 0.2em; }
-
-.container .gabinete {
-  width: 100%;
-  height: 100%;
-  margin-block: 13px; }
-
-.container .parrafoTres {
-  text-align: center;
-  font-family: 'Bebas Neue', cursive;
-  color: #eeeeee;
-  font-size: 1em;
-  text-shadow: #030303 0.1em 0.1em 0.2em; }
-
-.container .rowCuatro {
-  display: flex;
-  align-items: center; }
-
-.container .audio {
-  width: 100%;
-  height: 100%;
-  margin-block: 13px; }
-
-.container .parrafoCuatro {
-  text-align: center;
-  font-family: 'Bebas Neue', cursive;
-  color: #eeeeee;
-  font-size: 1em;
-  text-shadow: #222831 0.1em 0.1em 0.2em; }
-
-.container .rowCinco {
-  display: flex;
-  align-items: center; }
-
-.container .eventoCinco {
-  width: 100%;
-  height: 100%;
-  margin-block: 13px; }
-
-.container .parrafoCinco {
-  text-align: center;
-  font-family: 'Bebas Neue', cursive;
-  color: #eeeeee;
-  font-size: 1.5em;
-  text-shadow: #030303 0.1em 0.1em 0.2em; }
+  .studio .daws {
+    width: 100%;
+    height: 100%;
+    margin-block: 13px; }
+  .studio .cajaRows {
+    margin-bottom: 8px; }
+  .studio .rowTres {
+    display: flex;
+    align-items: center; }
+    .studio .rowTres .nuestrasRecomendaciones {
+      margin-block: 90px;
+      text-align: center;
+      font-family: 'Bebas Neue', cursive;
+      color: #eeeeee;
+      font-size: 3em;
+      text-shadow: #030303 0.1em 0.1em 0.2em; }
+  .studio .gabinete {
+    width: 100%;
+    height: 100%;
+    margin-block: 13px; }
+  .studio .parrafoRecomendaciones {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #eeeeee;
+    font-size: 1em;
+    text-shadow: #030303 0.1em 0.1em 0.2em; }
+  .studio .rowCuatro {
+    display: flex;
+    align-items: center; }
+  .studio .audio {
+    width: 100%;
+    height: 100%;
+    margin-block: 13px; }
+  .studio .parrafoAudio {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #eeeeee;
+    font-size: 1em;
+    text-shadow: #030303 0.1em 0.1em 0.2em; }
 
 section .booking {
   margin-top: 100px;
@@ -650,10 +730,19 @@ section .booking {
   color: #030303;
   text-transform: uppercase; }
 
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+  .homeStudio {
+    text-align: center; } }
+
 /* CSS PRODUCTOS */
-.row .col-sm-4, .row .logoLetras, .banners .row, .artistas .destacados, .artistas .card .card-body .boton-spotify, .artistas .card .card-body .spotify-link, .ubicacion, .formulario, .row .imgSupport, .formularioEventos, section .proximosLanzamientos {
+.row .col-sm-4, .row .logoLetras, .banners .row, .artistas .destacados, .artistas .card .card-body .boton-spotify, .artistas .card .card-body .spotify-link, .ubicacion, .row .imgSupport, .eventosInfo .formularioEventos, .formularioEventos, section .proximosLanzamientos {
   display: flex;
   justify-content: center; }
+
+.navegacion {
+  display: grid;
+  justify-content: end; }
 
 .lanzados .lanzadosRecientes {
   margin: 30px;
@@ -693,6 +782,7 @@ section .cancionesFree {
   justify-content: space-around; }
 
 section .proximos {
+  display: block;
   margin-top: 90px;
   text-align: center;
   font-family: 'Bebas Neue', cursive;

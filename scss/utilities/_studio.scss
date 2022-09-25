@@ -10,17 +10,25 @@
 // EXTEND
 @import "../base/extend";
 
-.container{
+.navegacion{
+    display: grid;
+    justify-content: end;
+}
+
+.studio{
+    background-color: #4c5252;
     .rowUno{
         display: flex;
         align-items: center;
 
         .homeStudio{
             text-align: center;
-            margin: 30px;
+            padding: 65px;
+
             font-family: 'Bebas Neue', cursive;
             color: nth($list: $color, $n: 2);
-            font-size: 1.5em;
+            font-size: 3em;
+            text-transform: uppercase;
             text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em; 
         }
     }
@@ -30,9 +38,9 @@
         margin-block: 13px;
     }
 
-    .parrafoUno{
+    .parrafoStudio{
         text-align: center;
-        font-family: 'Bebas Neue', cursive;
+        font-family: 'Montserrat', sans-serif;
         color: nth($list: $color, $n: 2);
         font-size: 1em;
         text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
@@ -44,9 +52,9 @@
         align-items: center;
     }
 
-    .parrafoDos{
+    .parrafoDaws{
         text-align: center;
-        font-family: 'Bebas Neue', cursive;
+        font-family: 'Montserrat', sans-serif;
         color: nth($list: $color, $n: 2);
         font-size: 1em;
         text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em; 
@@ -59,16 +67,20 @@
         margin-block: 13px;
     }
 
+    .cajaRows{
+        margin-bottom: 8px;
+    }
+
     .rowTres{
         display: flex;
         align-items: center;
 
         .nuestrasRecomendaciones{
-            margin: 50px;
+            margin-block: 90px;
             text-align: center;
             font-family: 'Bebas Neue', cursive;
             color: nth($list: $color, $n: 2);
-            font-size: 1.5em;
+            font-size: 3em;
             text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em; 
         }
     }
@@ -78,9 +90,9 @@
         margin-block: 13px;
     }
 
-    .parrafoTres{
+    .parrafoRecomendaciones{
         text-align: center;
-        font-family: 'Bebas Neue', cursive;
+        font-family: 'Montserrat', sans-serif;
         color: nth($list: $color, $n: 2);
         font-size: 1em;
         text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
@@ -96,31 +108,14 @@
         margin-block: 13px;
     }
 
-    .parrafoCuatro{
+    .parrafoAudio{
         text-align: center;
-        font-family: 'Bebas Neue', cursive;
+        font-family: 'Montserrat', sans-serif;
         color: nth($list: $color, $n: 2);
         font-size: 1em;
-        text-shadow: nth($list: $color, $n: 4) 0.1em 0.1em 0.2em;
-    }
-
-    .rowCinco{
-        display: flex;
-        align-items: center;
-    }
-
-    .eventoCinco{
-        @include medidas (100%, 100%);
-        margin-block: 13px;
-    }
-
-    .parrafoCinco{
-        text-align: center;
-        font-family: 'Bebas Neue', cursive;
-        color: nth($list: $color, $n: 2);
-        font-size: 1.5em;
         text-shadow: nth($list: $color, $n: 3) 0.1em 0.1em 0.2em;
     }
+
 }
 
 section{
@@ -162,6 +157,16 @@ section{
     font-size: x-small;
     color: nth($list: $color, $n: 3);
     text-transform: uppercase;
+}
+
+/* MEDIA QUERIES */ 
+@media screen and (max-width: 600px){
+    .homeStudio{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 992px){
+
 }
 
 

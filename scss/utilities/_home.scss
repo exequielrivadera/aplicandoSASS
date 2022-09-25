@@ -9,6 +9,26 @@
 //EXTEND
 @import "../base/extend";
 
+.container-fluid{
+    background-color: #404646;
+}
+
+.navegacion{
+    display: grid;
+    justify-content: end;
+}
+
+.barraNavegacion{
+    ul{
+        li{
+            a{
+                color: azure;
+            }
+        }
+    }
+}
+
+
 .row{
     padding: 0;
     .col-sm-4{
@@ -21,10 +41,6 @@
         grid-column: 2 / 3; 
     }
 
-    .container-fluid{
-        margin-left: 15rem;
-    }
-
 }
 
 .row{
@@ -34,7 +50,7 @@
         align-items: center;
     }
 
-    .logoLetras{
+    .logoLetras{        
         @extend %flex;
     }
 
@@ -47,9 +63,10 @@
 }
 
 .banners{
+    background-color: #393e46;
     .row{
         @extend %flex;
-        padding: 6rem;
+        margin-top: 0rem;
     }
 
     .movinBanner{
@@ -119,9 +136,6 @@
         }
     }
 }
-
-// SECTION ULTIMO
-
 
     .recomendacionesTexto{
         margin: 10px;
@@ -215,13 +229,7 @@
 
     
 }    
-        
-        
-
-
-
-
-
+      
 
 .samples{
     color: nth($list: $color, $n: 2);
@@ -239,7 +247,7 @@ footer{
     background-color: $color-footer;
     text-align: center;    
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: x-small;
+    font-size: 1.5rem;
     color: nth($list: $color, $n: 3);
     text-transform: uppercase;
     
@@ -255,4 +263,63 @@ footer{
 
 .card:hover{
     transform: translateY(-3%);
+}
+
+
+/* MEDIA QUERIES */ 
+@media screen and (max-width: 600px){
+    .mainHome{
+        display: flex;
+        justify-content: center;
+    }
+    .row{
+    
+        .logoLetras{
+            justify-self: center;
+            width: 300px;
+            height: 300px;
+        }
+    
+
+    }
+
+    .section-recomendacionesDos{
+        .recomendacionesDos{
+            .recoDos{
+                text-align: center;
+            }
+            .img{
+                .filaUno{
+                    display: grid;
+                    justify-content: center;
+                }
+                .filaDos{
+                    display: grid;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+
+
+}
+@media screen and (max-width: 992px){
+    .section-recomendacionesDos{
+        .recomendacionesDos{
+            .recoDos{
+                text-align: center;
+            }
+            .img{
+                .filaUno{
+                    display: grid;
+                    justify-content: center;
+                }
+                .filaDos{
+                    display: grid;
+                    justify-content: center;
+                }
+            }
+        }
+    }
 }
